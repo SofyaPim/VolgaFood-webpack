@@ -10256,12 +10256,7 @@ h5 {
 .logo {
   width: 6rem;
   height: 4.4em;
-  background-image: url(http://127.0.0.1:5500/dist/src/assets/images/volgafood.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
   z-index: 99;
-  background-size: cover;
-  filter: grayscale(0.9) invert(0.9) brightness(9);
 }
 
 .nav__links {
