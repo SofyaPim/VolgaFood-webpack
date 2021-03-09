@@ -10225,8 +10225,10 @@ a:hover {
 }
 
 body {
+  text-transform: uppercase;
   color: #4492a8;
-  font-family: "Alata", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
 }
 
 h1,
@@ -10234,10 +10236,9 @@ h2,
 h3,
 h4,
 h5 {
-  color: #05418f;
   text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  font-weight: 100;
+  letter-spacing: 0.2rem;
+  font-weight: 200;
   text-align: center;
 }
 
@@ -10250,7 +10251,6 @@ h5 {
   background-color: #fffefe;
   padding: 0;
   padding-top: 0;
-  border: 1px red;
 }
 
 .logo {
@@ -10264,7 +10264,7 @@ h5 {
   position: relative;
   text-decoration: none;
   color: #fffefe;
-  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
   margin-left: 2rem;
 }
 .nav__links::before {
@@ -10382,6 +10382,7 @@ h5 {
   font-size: 1.5rem;
   border-top: 1px solid #fffefe;
   box-shadow: 2px 2px 22px #9daca7;
+  letter-spacing: 0.2rem;
 }
 
 .propose {
@@ -10438,13 +10439,17 @@ h5 {
   font-family: "Josefin Sans", sans-serif;
   src: url(http://127.0.0.1:5500/dist/src/assets/fonts/JosefinSans-Thin.ttf) format(ttf);
 }
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url(http://127.0.0.1:5500/dist/src/assets/fonts/Poppins/Poppins-Light.ttf) format(ttf);
+}
 .header {
   background-color: #4492a8;
   color: #fffefe;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   position: relative;
   opacity: 0.9;
   box-shadow: 2px 2px 22px #9daca7;
@@ -10465,6 +10470,8 @@ h5 {
 }
 .header .phone {
   z-index: 99;
+  font-size: 1.2rem;
+  letter-spacing: 0.5rem;
 }
 
 .nav__bar {
@@ -10528,13 +10535,14 @@ h5 {
   width: 100%;
   height: 40rem;
   overflow: hidden;
-  transition: all ease-in-out 300ms;
 }
 #about .about__img__wrap__content {
   align-self: center;
   width: 90%;
+  transition: all ease-in-out 1000ms;
 }
 #about .about__img__wrap__content:hover {
+  transition: all ease-in-out 1000ms;
   width: 100%;
 }
 #about .about__text {
@@ -10548,7 +10556,8 @@ h5 {
 }
 #about .about__text p {
   line-height: 2;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.05rem;
 }
 
 .slider {
@@ -10612,6 +10621,8 @@ h5 {
 }
 .menu_section .card p {
   height: auto;
+  font-weight: 100;
+  text-transform: lowercase;
 }
 .menu_section h5 {
   color: #fffefe;
@@ -10770,10 +10781,12 @@ h5 {
   border-radius: inherit;
   padding: 20px;
   border: none;
+  letter-spacing: 0.1rem;
   background-color: #fffefe;
   color: #4492a8;
   word-wrap: break-word;
   border: 1px solid #4492a8;
+  text-transform: lowercase;
 }
 
 .displayNone {
@@ -10811,7 +10824,7 @@ h5 {
   color: #fffefe;
   text-align: center;
   padding-top: 1rem;
-  padding-top: 1rem;
+  padding-bottom: 1.3rem;
 }
 .footer .container {
   position: relative;
@@ -10835,10 +10848,11 @@ h5 {
 }
 .footer__logo {
   width: 30%;
-  filter: grayscale(0.9) invert(0.9) brightness(9);
+  align-self: start;
 }
 .footer__email, .footer__phone {
   align-self: start;
+  padding-left: 1rem;
   color: #fffefe;
 }
 .footer__nav {
@@ -10865,7 +10879,7 @@ h5 {
 .footer__col3 {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-end;
 }
 .footer .copyright {
   margin-top: 2rem;
