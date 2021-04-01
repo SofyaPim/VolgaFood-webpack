@@ -10511,7 +10511,7 @@ h5 {
   font-size: 1.2rem;
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 908px) {
   .header__nav {
     display: flex;
   }
