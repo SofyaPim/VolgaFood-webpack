@@ -10222,6 +10222,8 @@ a:hover {
 
 * {
   box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
 }
 
 body {
@@ -10247,7 +10249,7 @@ h5 {
 }
 
 .wrapper {
-  max-width: 1440px;
+  max-width: 100vw;
   background-color: #fffefe;
   padding: 0;
   padding-top: 0;
@@ -10256,7 +10258,8 @@ h5 {
 .logo {
   width: 6rem;
   height: 4.4em;
-  z-index: 99;
+  position: relative;
+  z-index: 199;
 }
 
 .nav__links {
@@ -10423,10 +10426,6 @@ h5 {
   clip-path: circle(30% at right 70%);
 }
 
-.zIndex {
-  z-index: -1;
-}
-
 .ps {
   font-size: 0.7rem;
 }
@@ -10449,8 +10448,9 @@ h5 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.5rem;
-  position: relative;
+  position: fixed;
+  z-index: 199;
+  width: 100vw;
   opacity: 0.9;
   box-shadow: 2px 2px 22px #9daca7;
   border-bottom: 1px solid #fffefe;
@@ -10489,7 +10489,7 @@ h5 {
     background-color: #4492a8;
     opacity: 0.9;
     position: absolute;
-    width: 96vw;
+    width: 100vw;
     display: none;
     flex-direction: column;
     box-shadow: 2px 3px 22px #9daca7;
@@ -10497,6 +10497,8 @@ h5 {
   }
   .nav__bar .nav__links {
     margin-top: 1rem;
+    line-height: 2;
+    margin-left: calc(50% - 100px);
   }
   .nav__bar .nav__links:first-child {
     margin-top: 8rem;
@@ -10751,7 +10753,12 @@ h5 {
   font-weight: 100;
   border-radius: inherit;
   padding: 1rem;
+  position: relative;
   border-top: 1px solid #fffefe;
+}
+.faq-quest span {
+  position: absolute;
+  right: 1rem;
 }
 .faq-quest:not(.last) {
   border-bottom: 1px solid #fffefe;
