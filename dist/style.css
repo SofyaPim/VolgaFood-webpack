@@ -10434,6 +10434,10 @@ h5 {
   clip-path: circle(30% at right 70%);
 }
 
+.active {
+  color: #eb4583;
+}
+
 @media all and (max-width: 900px) {
   p {
     font-size: 1rem;
@@ -10446,7 +10450,7 @@ h5 {
     padding: 4.5rem 0;
   }
   .main .carousel-inner .carousel-item img {
-    height: 300px;
+    height: 30%;
   }
   .main .carousel-caption {
     font-size: 1rem;
@@ -10583,14 +10587,14 @@ h5 {
 }
 #about .about__img__wrap__content {
   align-self: center;
-  width: 90%;
-  height: 90%;
+  width: 23rem;
+  height: 35rem;
   transition: all ease-in-out 1000ms;
 }
 #about .about__img__wrap__content:hover {
   transition: all ease-in-out 1000ms;
-  width: 100%;
-  height: 100%;
+  width: 23.9rem;
+  height: 35.8rem;
 }
 #about .about__text {
   text-align: center;
@@ -10607,6 +10611,16 @@ h5 {
   letter-spacing: 0.05rem;
 }
 
+@media all and (max-width: 785px) {
+  #about .about__img__wrap__content {
+    width: 20rem;
+    height: 32rem;
+  }
+  #about .about__img__wrap__content:hover {
+    width: 20.9rem;
+    height: 32.8rem;
+  }
+}
 .slider {
   max-width: 100%;
   position: relative;
@@ -10752,7 +10766,93 @@ h5 {
   filter: blur(20px);
 }
 
-@media all and (max-width: 375px) {
+.tabs-menu {
+  padding: 4rem 6rem;
+}
+
+.dayTab {
+  font-weight: 700;
+  font-size: 1.8rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.dayTab .dayTab__block {
+  position: relative;
+}
+.dayTab .dayTab__block::before {
+  position: absolute;
+  top: 3rem;
+  content: "";
+  width: 0;
+  transition: 0.5s;
+  height: 2px;
+  background: #eb4583;
+}
+.dayTab .dayTab__block.active::before {
+  width: 5rem;
+  color: #eb4583;
+}
+
+.dayMenu {
+  width: 100%;
+}
+
+.menuCard {
+  background: #4492a8;
+  opacity: 0.8;
+  color: #fffefe;
+  display: none;
+}
+.menuCard .card-body {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+.menuCard .card-body .card_menu {
+  width: 300px;
+}
+.menuCard .card-body .card_menu p,
+.menuCard .card-body .card_menu h5 {
+  text-align: start;
+}
+.menuCard .card-body img {
+  position: absolute;
+  top: 2rem;
+  width: 15rem;
+  height: 15rem;
+}
+.menuCard .card-body a {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  display: block;
+  color: #fffefe;
+  background-color: #0e9e2d;
+  border-color: #0e9e2d;
+  box-shadow: 0px 0px 12px #fffefe;
+  width: calc(50% - 10rem);
+  height: 5rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+.menuCard .card-body a p {
+  padding: 1rem;
+  text-align: center;
+}
+.menuCard .card-body a:hover {
+  box-shadow: 5px 5px 25px #fffefe;
+  text-decoration: none;
+}
+.menuCard .card-body a:hover p {
+  text-decoration: none;
+}
+
+@media all and (max-width: 768px) {
   #splide .btn {
     margin: 1rem 1rem;
     font-size: 1rem;
@@ -10760,8 +10860,69 @@ h5 {
   #splide .btn:hover {
     box-shadow: 0px 0px 22px #fffefe;
   }
+
+  .tabs-menu {
+    padding: 2rem;
+  }
+
+  .dayTab {
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+  .dayTab .dayTab__block {
+    margin-bottom: 2rem;
+  }
+  .dayTab .dayTab__block::before {
+    position: absolute;
+    top: 3rem;
+    content: "";
+  }
+  .dayTab .dayTab__block.active::before {
+    width: 5rem;
+  }
+
+  .dayMenu {
+    width: 100%;
+  }
+
+  .menuCard .card-body {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+  .menuCard .card-body .card_menu {
+    margin-top: 9rem;
+    max-width: 300px;
+    margin-bottom: 6rem;
+  }
+  .menuCard .card-body img {
+    position: absolute;
+    top: 2rem;
+    left: calc(50% - 3.5rem);
+    width: 8rem;
+    height: 8rem;
+  }
+  .menuCard .card-body a {
+    position: absolute;
+    bottom: 1rem;
+    right: calc(10% - 1rem);
+    display: block;
+    color: #fffefe;
+    background-color: #0e9e2d;
+    border-color: #0e9e2d;
+    box-shadow: 0px 0px 12px #fffefe;
+    width: 90%;
+    margin: 0 auto;
+    height: 5rem;
+    font-size: 1.5rem;
+  }
+  .menuCard .card-body a p {
+    padding: 1rem;
+  }
 }
 .faq_section {
+  transition: all 1s ease-in-out;
   padding-bottom: 3rem;
   color: #fffefe;
 }
@@ -10844,6 +11005,7 @@ h5 {
   border-radius: inherit;
   padding: 20px;
   border: none;
+  transition: all 1s ease-in-out;
   letter-spacing: 0.1rem;
   background-color: #fffefe;
   color: #4492a8;
@@ -10854,7 +11016,7 @@ h5 {
 
 .displayNone {
   display: none;
-  transition: all 300ms ease-in-out;
+  transition: all 1000ms ease-in-out;
 }
 
 .inactive-quest .faq-arrow path {
