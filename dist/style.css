@@ -10924,7 +10924,7 @@ h5 {
 }
 .faq_section {
   transition: all 1s ease-in-out;
-  padding-bottom: 3rem;
+  padding-bottom: 8rem;
   color: #fffefe;
 }
 .faq_section h3 {
@@ -11068,7 +11068,7 @@ h5 {
 .footer .leaf {
   position: absolute;
   width: 10rem;
-  top: -5rem;
+  top: -8rem;
   right: -4rem;
 }
 .footer .shadow {
