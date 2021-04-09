@@ -10782,6 +10782,7 @@ h5 {
 }
 .dayTab .dayTab__block {
   position: relative;
+  cursor: pointer;
 }
 .dayTab .dayTab__block::before {
   position: absolute;
